@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+ <script>
+	
+	function showUser() {
+	  global_ = "";
+	   
+	str = "not"
+    if (str == "") {
+        
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                
+			 global_ = this.responseText
+			 
+			 cordova.plugins.notification.badge.set(global_, showToast);
+					// alert(global_);
+			 
+				
+            }
+        };
+       xmlhttp.open("GET","http://shiftclocker.com/test2/dcare/message-count.php?q="+str,true);
+        xmlhttp.send();
+    }
+	
+ 
+}
+	</script>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="0;URL='https://shiftclocker.com/test2/dcare/index.php'" />   
+    <title>Shiftclocker | Punch in made easy......</title>
+     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<script type="text/javascript" src="cordova.js"></script>
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+   
+    <link rel="stylesheet" href="themes/mycustomtheme.min.css" />
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:500,600,700,800,900,400,300' rel='stylesheet' type='text/css'>
+
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Owl Carousel Assets -->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+
+
+    <!-- Pixeden Icon Font -->
+    <link rel="stylesheet" href="css/Pe-icon-7-stroke.css">
+
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- PrettyPhoto -->
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Style -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link href="css/responsive.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body  onLoad="showUser()">
+    <!-- PRELOADER -->
+    <div class="spn_hol">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+ 
+    <section class="header parallax home-parallax page" id="HOME">
+        <h2></h2>
+        <div class="section_overlay">
+             
+
+            <div class="container home-container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="logo text-center">
+                                <!-- LOGO -->
+                             
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-8">
+                        <div class="home_text">
+                            <!-- TITLE AND DESC -->
+                             
+
+                            <div class="download-btn">
+                            <!-- BUTTON -->
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+
+    <section class="copyright">
+        <h2></h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copy_right_text">
+                    <!-- COPYRIGHT TEXT -->
+                        <!-- <p>Copyright &copy; 2018 ShiftClocker Inc. All Rights Reserved.</p>   -->      
+                        
+                    </div>
+                     
+                </div>
+
+                <div class="col-md-6">
+                    <div class="scroll_top">
+                        <a href="#HOME"><i class="fa fa-angle-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END FOOTER -->
+
+
+<!-- =========================
+     SCRIPTS 
+============================== -->
+
+
+
+<!--<script src="js/jquery.min.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.ajaxchimp.langs.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/script.js"></script>
+<script src="https://github.com/katzer/cordova-plugin-badge/blob/master/www/badge.js"> </script> 
+ 
+        <script type="text/javascript" src="js/index.js"></script>
+     
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+      
+   
+        <script type="text/javascript">
+		
+            var dialog;
+
+            showToast = function (text) {
+                setTimeout(function () {
+                    if (window.Windows !== undefined) {
+
+						if(text != 0 || text != "0" || text != "")
+						{
+                        showWinDialog(text);
+						}
+                    } else
+                    if (window.plugins && window.plugins.toast) {
+						if(text != 0 || text != "0" || text != "")
+						{
+                        window.plugins.toast.showShortBottom(String(text));
+						}
+                    }
+                    else {
+                       // alert(text);
+                    }
+                }, 100);
+            };
+
+            showWinDialog = function (text) {
+                if (dialog) {
+                    dialog.content = text;
+                    return;
+                }
+
+                dialog = new Windows.UI.Popups.MessageDialog(text);
+
+                dialog.showAsync().done(function () {
+                    dialog = null;
+                });
+            };
+        </script>
+
+        <script type="text/javascript">
+	  clearBadge = function () {
+                cordova.plugins.notification.badge.clear(showToast);
+            };
+
+            setBadge = function (rand) {
+                var number = rand ? Math.round(Math.random()*100) : 10;
+				 if(number != 0 || number != "0" || number != "" || number != null)
+ 			 {
+                cordova.plugins.notification.badge.set(number, showToast);
+			 }
+            };
+
+            getBadge = function () {
+                cordova.plugins.notification.badge.get(showToast);
+            };
+
+            increaseBadge = function () {
+                cordova.plugins.notification.badge.increase(1, showToast);
+            };
+
+            decreaseBadge = function () {
+                cordova.plugins.notification.badge.decrease(1, showToast);
+            };
+
+            hasPermission = function () {
+                cordova.plugins.notification.badge.hasPermission(showToast);
+            };
+
+            registerPermission = function () {
+                cordova.plugins.notification.badge.registerPermission(showToast);
+            };
+
+            switchAutoClear = function () {
+                cordova.plugins.notification.badge.configure({
+                    autoClear: !cordova.plugins.notification.badge._config.autoClear
+                });
+
+                showToast('Set autoClear to \n' + cordova.plugins.notification.badge._config.autoClear);
+            };
+
+            changeTitle = function () {
+                var title = cordova.plugins.notification.badge._config.title + '_new';
+
+
+                cordova.plugins.notification.badge.configure({
+                    title: title
+                });
+
+                showToast('Set title to \n"' + title + '"');
+            };
+        </script>
+
+</body>
+
+</html>
