@@ -1,18 +1,14 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
 	xmlns:gap = "http://phonegap.com/ns/1.0"
 	id        = "com.binarysoft.emumap"
-	versionCode="1"
-	version   = "1.2.6">
+	versionCode="2"
+	version   = "2.0.0">
 	<preference name="phonegap-version" value="cli-6.5.0"/>
 
     <plugin name="cordova-plugin-whitelist" source="npm" />
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
-	
-	
-	
-	
     <platform name="ios" />
     <platform name="android" />
     <platform name="winphone" />
@@ -20,8 +16,8 @@
     <name>Shiftclocker</name>
     <description>Punch in made easy</description>
     <author href="http://www.online.shiftclocker.com" email="info@shiftclocker.com">Olumide Francis</author>
-    <content src="index.html" />
-    
+    <!--<content src="index.html" />-->
+    <preference name="permissions" value="none" />
 	<preference name="android-build-tool" value="gradle" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
@@ -44,20 +40,17 @@
 	<preference name="target-device" value="universal" />
 	<preference name="deployment-target" value="8.0" />
   <plugin name="cordova-plugin-geolocation" source="npm"/>
-	 
-	 <preference name="permissions" value="none" />
-		<gap:plugin name="cordova-plugin-vibration" source="npm" version="2.1.1" />
-
+	
    <plugin name="cordova-plugin-geolocation"  spec="0.3.12" source="npm"/>
 <plugin name="cordova-plugin-network-information"  spec="0.2.15" source="npm" />
- 
+ <gap:plugin name="cordova-plugin-vibration" source="npm" version="2.1.1" />
   <gap:plugin name="de.appplant.cordova.plugin.badge" source="npm" /> 
-
- 	  <plugin name="cordova-plugin-device" value="org.apache.cordova.device"/>
+	
 	<feature name="Notification">
     <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
 </feature>
 
+ 	  <plugin name="cordova-plugin-device" value="org.apache.cordova.device"/>
     <plugin name="cordova-plugin-device-motion" source="npm"/>
     <plugin name="cordova-plugin-device-orientation" source="npm"/>
     <plugin name="cordova-plugin-dialogs" source="npm"/>
@@ -66,10 +59,6 @@
     <plugin name="cordova-plugin-inappbrowser" source="npm"/>
     <plugin name="cordova-plugin-media" source="npm"/>
     <plugin name="cordova-plugin-network-information" source="npm"/>
-	
-
-	
-	
 
  
 	 
@@ -107,16 +96,12 @@
 	
 	
  
-  <splash src="splash.png" />
-
-
 
    <!-- <plugin name="org.apache.cordova.device" version="0.2.3" source="npm"/> -->
     
  
 		
-				<feature name="http://tizen.org/api/systeminfo" required="true"/>
- 
+		<feature name="http://tizen.org/api/systeminfo" required="true"/>
 		 
 		<feature name="http://api.phonegap.com/1.0/media" />
 		<feature name="http://api.phonegap.com/1.0/network" />
